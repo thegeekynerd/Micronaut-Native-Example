@@ -1,7 +1,17 @@
 micronaut:
   application:
     name: micronautguide
-netty:
+datasources:
   default:
-    allocator:
-      max-order: 3
+    driverClassName: org.mariadb.jdbc.Driver
+    db-type: mariadb
+    schema-generate: none
+    dialect: MYSQL
+    username: root
+    password: 12345678
+    url: 'jdbc:mariadb://localhost:3306/my_company'
+
+jpa:
+  default.properties.hibernate:
+    physical_naming_strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    hbm2ddl.auto: none
