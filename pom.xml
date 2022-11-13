@@ -18,7 +18,7 @@
     <jdk.version>17</jdk.version>
     <release.version>17</release.version>
     <micronaut.version>3.7.3</micronaut.version>
-    <micronaut.runtime>netty</micronaut.runtime>
+    <micronaut.runtime>tomcat</micronaut.runtime>
     <exec.mainClass>example.micronaut.Application</exec.mainClass>
   </properties>
 
@@ -45,11 +45,16 @@
       <artifactId>micronaut-http-client</artifactId>
       <scope>compile</scope>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>io.micronaut</groupId>
       <artifactId>micronaut-http-server-netty</artifactId>
       <scope>compile</scope>
-    </dependency>
+    </dependency>-->
+    <dependency>
+			<groupId>io.micronaut.servlet</groupId>
+			<artifactId>micronaut-http-server-tomcat</artifactId>
+			<scope>compile</scope>
+		</dependency>
     <dependency>
       <groupId>io.micronaut</groupId>
       <artifactId>micronaut-runtime</artifactId>
